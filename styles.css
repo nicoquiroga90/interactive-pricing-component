@@ -1,0 +1,58 @@
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  font-family: Manrope, Arial, sans-serif;
+  background: linear-gradient(to bottom, #d1daf5 50%, #fafbff 50%);
+  overflow-x: hidden;
+  color: #858fad;
+}
+
+.price-selector {
+  background-color: white;
+  color: #858fad;
+  width: 500px;
+  margin: 50% auto; /* Center the selector */
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.pageviews-conteiner {
+  margin: 35px 200px 20px 0px;
+  font-size: 20px;
+}
+
+#priceSimbol,
+#priceValue {
+  font-size: 50px;
+}
+
+.pricing-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  height: 5px;
+  background: #d1daf5;
+  border-radius: 10px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 25px;
+  width: 25px;
+  background-image: url(/Users/nico90/Desktop/interactive-pricing-component-main/images/arrows.png) #10dac6;
+  border-radius: 50%;
+  transition: 0.2s ease-in-out;
+  box-shadow: 0px 5px 10px 5px rgba(16, 218, 198, 0.5); /* Sombreado con el mismo color */
+}

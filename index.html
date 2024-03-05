@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Price Selector</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600..800&display=swap" rel="stylesheet" />
+<script src="script.js"></script>
+
+</head>
+<body>
+    <div class="price-selector">
+        <div class="pricing-info">
+            <p>
+                <div class="pageviews-conteiner">
+                    <span id="pageviews">10K</span>
+                    <span id="pageviews-text">Page view</span>
+                </div>
+            </p>
+            <p>
+                <span id="priceSimbol"> $</span><span id="priceValue">8</span><span id="billingPeriod">/month</span>
+            </p>
+        </div>
+        <div class="slider-container">
+            <input
+                type="range"
+                min="0"
+                max="4"
+                value="0"
+                class="slider"
+                id="priceSlider"
+                 oninput="updateSliderBackground()"
+            />
+        </div>
+        <div class="billing-switch">
+            <span>Monthly Billing</span>
+            <label class="switch">
+                <input type="checkbox" id="billingType" />
+                <span class="slider round"></span>
+            </label>
+            <span class="annual-billing"
+                >Annual Billing <span class="discount">25% discount</span></span
+            >
+        </div>
+        <hr class="hr-separator" />
+        <div class="list">
+            <p>Unlimited websites</p>
+            <p>100% ownership</p>
+            <p>Email reports</p>
+        </div>
+        <button class="trial-button">Start my trial</button>
+    </div>
+
+</body>
+</html>
