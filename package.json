@@ -1,0 +1,32 @@
+{
+  "name": "interactive-pricing-component",
+  "version": "1.0.0",
+  "description": "Challenge Frontend Mentor - Interactive pricing component",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicoquiroga90/interactive-pricing-component.git"
+  },
+  "keywords": [
+    "Challenge",
+    "Frontend",
+    "Mentor",
+    "-",
+    "Interactive",
+    "pricing",
+    "component"
+  ],
+  "author": "NicoQ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicoquiroga90/interactive-pricing-component/issues"
+  },
+  "homepage": "https://github.com/nicoquiroga90/interactive-pricing-component#readme",
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}
