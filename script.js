@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const priceValue = document.getElementById("priceValue");
     const billingPeriod = document.getElementById("billingPeriod");
     const pageviews = document.getElementById("pageviews");
+    const switchElement = document.querySelector(".switch");
 
     const pageViewRanges = ["10K", "50K", "100K", "500K", "1M"];
     const monthlyPrices = [8, 12, 16, 24, 36];
@@ -32,7 +33,18 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-  
+    function updateSwitchBackground() {
+        if (billingType.checked) {
+            switchElement.style.backgroundColor = "hsl(174, 86%, 45%)";
+        } else {
+            switchElement.style.backgroundColor = "hsl(223, 50%, 87%)";
+        }
+    }
+
+    function updateSliderBackground() {
+        const sliderValue = (priceSlider.value - priceSlider.min) / (priceSlider.max - priceSlider.min) * 100;
+        priceSlider.style.background = `linear-gradient(to right, #10dac6 ${sliderValue}%, #d1daf5 ${sliderValue}%)`;
+    }
 
     // Event listeners
     priceSlider.addEventListener("input", () => {
@@ -41,16 +53,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     const billingType = document.getElementById("billingType");
-    billingType.addEventListener("change", updatePrices);
+    billingType.addEventListener("change", () => {
+        updatePrices();
+        updateSwitchBackground();
+    });
 
     // Initial updates
     updatePrices();
     updateSliderBackground();
 });
-
-
- function updateSliderBackground() {
-    const priceSlider = document.getElementById("priceSlider");
-    const sliderValue = (priceSlider.value - priceSlider.min) / (priceSlider.max - priceSlider.min) * 100;
-    priceSlider.style.background = `linear-gradient(to right, #10dac6 ${sliderValue}%, #d1daf5 ${sliderValue}%)`;
-}

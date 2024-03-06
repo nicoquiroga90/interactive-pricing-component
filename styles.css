@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Manrope, Arial, sans-serif;
-  background: linear-gradient(to bottom, #d1daf5 50%, #fafbff 50%);
+  background: linear-gradient(to bottom, hsl(223, 50%, 87%) 50%, hsl(230, 100%, 99%) 50%);
   overflow-x: hidden;
   color: #858fad;
 }
@@ -14,7 +14,7 @@ body {
   background-color: white;
   color: #858fad;
   width: 500px;
-  margin: 50% auto; /* Center the selector */
+  margin: 50% auto; 
   padding: 40px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -49,10 +49,66 @@ input[type="range"] {
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  height: 25px;
-  width: 25px;
-  background-image: url(/Users/nico90/Desktop/interactive-pricing-component-main/images/arrows.png) #10dac6;
+  height: 30px;
+  width: 30px;
+  background-image: url(./images/arrows.svg);
+  background-color: hsl(174, 86%, 45%);
   border-radius: 50%;
   transition: 0.2s ease-in-out;
-  box-shadow: 0px 5px 10px 5px rgba(16, 218, 198, 0.5); /* Sombreado con el mismo color */
+  box-shadow: 0px 5px 15px 5px rgba(16, 218, 198, 0.5);
+  background-size: 25px; 
+  background-repeat: no-repeat; 
+  background-position: 2px 2px; 
 }
+
+.billing-switch{
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px; 
+  height: 25px; 
+  background-color: hsl(223, 50%, 87%);
+  border-radius: 15px;
+  transition: background-color 0.4s; 
+}
+
+.switch input {
+  display: none;
+}
+
+.slider-round {
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%); 
+  width: 25px; 
+  height: 25px; 
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.4s; 
+}
+
+.slider-round:before {
+  position: absolute;
+  content: "";
+  height: 21px;
+  width: 21px; 
+  top: 50%;
+  left: 2px; 
+  transform: translateY(-50%); 
+  border-radius: 50%;
+  transition: .4s;
+}
+
+input:checked + .slider-round {
+  transform: translateX(25px) translateY(-50%); 
+}
+
+input:checked + .slider-round:before {
+  left: calc(100% - 23px);
+}
+
