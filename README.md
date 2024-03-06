@@ -2,6 +2,10 @@
 
 ![Design preview for the Interactive pricing component coding challenge](./design/desktop-preview.jpg)
 
+## My version
+
+ [Link](https://interactive-pricing-component-xsn9.onrender.com)
+
 
 ## The challenge
 
