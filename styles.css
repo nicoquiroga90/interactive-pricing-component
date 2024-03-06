@@ -22,12 +22,13 @@ body {
 
 .pageviews-conteiner {
   margin: 35px 200px 20px 0px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 #priceSimbol,
 #priceValue {
   font-size: 50px;
+  color: hsl(227, 35%, 25%);
 }
 
 .pricing-info {
@@ -41,8 +42,8 @@ input[type="range"] {
   width: 100%;
   cursor: pointer;
   outline: none;
-  height: 5px;
-  background: #d1daf5;
+  height: 10px;
+  background: hsl(224, 65%, 95%);
   border-radius: 10px;
 }
 
@@ -62,17 +63,17 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .billing-switch{
-  margin: 20px auto;
+  margin: 50px auto;
+  padding-left: 20%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 .switch {
   position: relative;
   display: inline-block;
-  width: 50px; 
-  height: 25px; 
-  background-color: hsl(223, 50%, 87%);
+  width: 40px; 
   border-radius: 15px;
+  background-color: hsl(223, 50%, 87%);
   transition: background-color 0.4s; 
 }
 
@@ -85,30 +86,41 @@ input[type="range"]::-webkit-slider-thumb {
   cursor: pointer;
   top: 50%;
   transform: translateY(-50%); 
-  width: 25px; 
-  height: 25px; 
+  width: 15px; 
+  height: 15px; 
   background-color: #fff;
   border-radius: 50%;
   transition: transform 0.4s; 
+  left: 5%;
 }
 
 .slider-round:before {
   position: absolute;
   content: "";
-  height: 21px;
-  width: 21px; 
-  top: 50%;
-  left: 2px; 
+  height: 16px;
+  width: 16px; 
   transform: translateY(-50%); 
   border-radius: 50%;
   transition: .4s;
 }
 
 input:checked + .slider-round {
-  transform: translateX(25px) translateY(-50%); 
+  transform: translateX(20px) translateY(-50%); 
 }
 
 input:checked + .slider-round:before {
   left: calc(100% - 23px);
 }
 
+.discount{
+color: hsl(15, 100%, 70%);
+background-color: hsl(14, 92%, 95%); 
+border-radius: 15%;
+margin: 10px;
+font-size: 90%;
+}
+
+.checkmark {
+    color: green; /* Cambia el color del checkmark a verde */
+    margin-right: 5px; /* Espacio entre el checkmark y el texto */
+}
