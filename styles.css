@@ -1,31 +1,59 @@
-html,
 body {
   height: 100vh;
   width: 100vw;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   font-family: Manrope, Arial, sans-serif;
-  background: linear-gradient(to bottom, hsl(223, 50%, 87%) 50%, hsl(230, 100%, 99%) 50%);
+  background: linear-gradient(
+    to bottom,
+    hsl(223, 50%, 87%) 50%,
+    hsl(230, 100%, 99%) 50%
+  );
   overflow-x: hidden;
   color: #858fad;
+}
+
+.title-container {
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+h1 {
+  color: hsl(227, 35%, 25%);
+  font-weight: 800;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-weight: 200;
+  color: hsl(227, 34%, 36%);
+  font-size: 1.5rem;
 }
 
 .price-selector {
   background-color: white;
   color: #858fad;
-  width: 500px;
-  margin: 50% auto; 
-  padding: 40px;
+  width: 600px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
 }
 
-.pageviews-conteiner {
+.pricing-container {
+      padding: 5% 5% 0%;
+}
+
+.pageviews-container {
   margin: 35px 200px 20px 0px;
   font-size: 18px;
 }
 
-#priceSimbol,
+#priceSymbol,
 #priceValue {
   font-size: 50px;
   color: hsl(227, 35%, 25%);
@@ -36,6 +64,7 @@ body {
   justify-content: space-between;
   margin-bottom: 10px;
 }
+
 input[type="range"] {
   -webkit-appearance: none;
   appearance: none;
@@ -57,24 +86,25 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 50%;
   transition: 0.2s ease-in-out;
   box-shadow: 0px 5px 15px 5px rgba(16, 218, 198, 0.5);
-  background-size: 25px; 
-  background-repeat: no-repeat; 
-  background-position: 2px 2px; 
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: 2px 2px;
 }
 
-.billing-switch{
-  margin: 50px auto;
+.billing-switch {
+  margin: 30px auto 0;
   padding-left: 20%;
   display: flex;
   justify-content: space-between;
 }
+
 .switch {
   position: relative;
   display: inline-block;
-  width: 40px; 
+  width: 40px;
   border-radius: 15px;
   background-color: hsl(223, 50%, 87%);
-  transition: background-color 0.4s; 
+  transition: background-color 0.4s;
 }
 
 .switch input {
@@ -85,12 +115,12 @@ input[type="range"]::-webkit-slider-thumb {
   position: absolute;
   cursor: pointer;
   top: 50%;
-  transform: translateY(-50%); 
-  width: 15px; 
-  height: 15px; 
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
   background-color: #fff;
   border-radius: 50%;
-  transition: transform 0.4s; 
+  transition: transform 0.4s;
   left: 5%;
 }
 
@@ -98,29 +128,65 @@ input[type="range"]::-webkit-slider-thumb {
   position: absolute;
   content: "";
   height: 16px;
-  width: 16px; 
-  transform: translateY(-50%); 
+  width: 16px;
+  transform: translateY(-50%);
   border-radius: 50%;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider-round {
-  transform: translateX(20px) translateY(-50%); 
+  transform: translateX(20px) translateY(-50%);
 }
 
 input:checked + .slider-round:before {
   left: calc(100% - 23px);
 }
 
-.discount{
-color: hsl(15, 100%, 70%);
-background-color: hsl(14, 92%, 95%); 
-border-radius: 15%;
-margin: 10px;
-font-size: 90%;
+.discount {
+  color: hsl(15, 100%, 70%);
+  background-color: hsl(14, 92%, 95%);
+  border-radius: 15%;
+  margin: 10px;
+  font-size: 90%;
+}
+
+hr.hr-separator {
+  background-color: hsl(230, 100%, 99%);
+  border: none;
+  height: 5px;
+}
+
+.list {
+  font-size: 15px;
+  margin: 10%;
 }
 
 .checkmark {
-    color: green; /* Cambia el color del checkmark a verde */
-    margin-right: 5px; /* Espacio entre el checkmark y el texto */
+  color: hsl(174, 86%, 45%);
+  margin-right: 5px;
+}
+
+.list-trial-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.trial-button {
+  margin: 16% auto auto 10%;
+  background-color: hsl(227, 35%, 25%);
+  color: hsl(226, 100%, 87%);
+  border-radius: 50px;
+  width: 200px;
+  height: 40px;
+  font-size: 15px;
+  border: none;
+}
+
+.trial-button:hover {
+  cursor: pointer;
+}
+
+.slider-container {
+  width: 90%; 
+  margin: 0 auto; 
 }
